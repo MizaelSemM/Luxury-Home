@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-graphite-200;
+  }
+
+  body {
+    @apply bg-white text-graphite-900 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-bronze-500/20 text-bronze-700;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-bronze-500 to-gold-500 bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-graphite-900 px-8 py-4 
+           text-sm font-medium uppercase tracking-widest text-white 
+           transition-all duration-300 hover:bg-graphite-800 
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze-500;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border-2 border-graphite-900 
+           px-8 py-4 text-sm font-medium uppercase tracking-widest text-graphite-900 
+           transition-all duration-300 hover:bg-graphite-900 hover:text-white
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze-500;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-bronze-500 px-8 py-4 
+           text-sm font-medium uppercase tracking-widest text-white 
+           transition-all duration-300 hover:bg-bronze-600 
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze-500;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
