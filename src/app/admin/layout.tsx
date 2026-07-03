@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { LogOut, LayoutDashboard } from "lucide-react";
 
 export default function AdminLayout({
@@ -9,17 +9,11 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-  const pathname = usePathname();
-  const isLoginPage = pathname === "/admin/login";
 
   const handleLogout = async () => {
     document.cookie = "admin_token=; path=/; max-age=0";
     router.push("/admin/login");
   };
-
-  if (isLoginPage) {
-    return <>{children}</>;
-  }
 
   return (
     <div className="min-h-screen bg-graphite-50">

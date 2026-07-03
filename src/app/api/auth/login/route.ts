@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const token = generateToken();
+    const token = await generateToken();
 
     const response = NextResponse.json({
       data: { message: "Autenticado com sucesso" },
