@@ -130,7 +130,7 @@ O formulário envia mensagens utilizando SMTP através do Nodemailer.
 Clone o projeto
 
 ```bash
-git clone https://github.com/seuusuario/luxury-construction.git
+git clone https://github.com/MizaelSemM/Luxury-Home.git
 ```
 
 Entre na pasta
